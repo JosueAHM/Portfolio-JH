@@ -1,0 +1,7 @@
+{
+    "title": "Este es mi  portafolio web",
+    "description": "Edita <1>src/App.jsx</1> y guarda para probar HMR",
+    "count": "Contador: {{count}}",
+    "docs": "Documentación",
+    "social": "Conecta con nosotros"
+}

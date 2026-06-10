@@ -1,0 +1,7 @@
+{
+    "title": "This is my first web portfolio",
+    "description": "Edit <1>src/App.jsx</1> and save to test HMR",
+    "count": "Count: {{count}}",
+    "docs": "Documentation",
+    "social": "Connect with us"
+}
