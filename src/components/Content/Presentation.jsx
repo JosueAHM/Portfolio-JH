@@ -1,19 +1,12 @@
 import { useTranslation } from 'react-i18next';
 
-/**
- * Presentation component - The hero section of the portfolio.
- * Displays a welcome message, role, and a brief description.
- */
 const Presentation = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="home" className="flex flex-col items-start justify-center min-h-[80vh] animate-in fade-in slide-in-from-bottom-4 duration-1000">
-      <div className="max-w-4xl space-y-8">
-        <div   className="space-y-4">
-          {/* <p className="text-primary font-semibold tracking-wider uppercase text-sm md:text-base mb-2">
-            {t('nav.home')}
-          </p> */}
+    <section id="home" className="relative flex flex-col md:flex-row items-center justify-center min-h-[80vh] gap-12 px-4">
+      <div className="flex-1 max-w-2xl space-y-8">
+        <div className="space-y-4">
           <h1 className="heading-1 font-bold tracking-tight text-white leading-tight">
             {t('presentation')}
           </h1>
@@ -28,45 +21,58 @@ const Presentation = () => {
           {t('presentation-description')}
         </p>
 
-        <div className='flex flex-wrap items-center gap-6 pt-8'>
+        <div className="flex flex-wrap items-center gap-6 pt-8">
           <a
-            href="#projects"
-            className="button--outline"
+            href="https://drive.google.com/file/d/1TWbb4S6JvNmWMAisk3_u4VTb26WVlBGH/view?usp=sharing"
+            className="button button--outline"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <span className="relative z-10">{t('see-resume')}</span>
-            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+            {t('see-resume')}
+          </a>
+          <a
+            href="https://www.linkedin.com/in/josue-holguin-4b5362221"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button button--outline"
+          >
+            {t('see-linkedin')}
           </a>
         </div>
-        {/* <footer className="flex flex-wrap items-center gap-6 pt-8">
-
-          <div className="flex items-center gap-5">
-            <a
-              href="https://github.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-text-muted hover:text-primary hover:bg-secondary rounded-full transition-all duration-300"
-              aria-label="GitHub"
-            >
-              <svg className="w-8 h-8 fill-current">
-                <use href="/icons.svg#github-icon" />
-              </svg>
-            </a>
-            <a
-              href="https://linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-text-muted hover:text-primary hover:bg-secondary rounded-full transition-all duration-300"
-              aria-label="LinkedIn"
-            >
-              <svg className="w-8 h-8 fill-current">
-                <use href="/icons.svg#linkedin-icon" />
-              </svg>
-            </a>
-          </div>
-        </footer> */}
       </div>
 
-      {/* Background Decorative Element */}
+      <div className="hidden md:flex items-center justify-center flex-1">
+        <svg
+          viewBox="0 0 280 280"
+          className="w-64 h-64 lg:w-80 lg:h-80 text-primary"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect x="20" y="20" width="240" height="200" rx="16" stroke="currentColor" strokeWidth="2" />
+          <circle cx="44" cy="44" r="6" fill="currentColor" />
+          <circle cx="68" cy="44" r="6" fill="currentColor" opacity="0.5" />
+          <circle cx="92" cy="44" r="6" fill="currentColor" opacity="0.3" />
+          <text x="40" y="100" fontSize="20" fill="currentColor" fontFamily="monospace" opacity="0.9">
+            &gt; const dev = {'{'}
+          </text>
+          <text x="60" y="130" fontSize="18" fill="currentColor" fontFamily="monospace" opacity="0.7">
+            name: &quot;Josué&quot;
+          </text>
+          <text x="60" y="156" fontSize="18" fill="currentColor" fontFamily="monospace" opacity="0.7">
+            role: &quot;Full Stack&quot;
+          </text>
+          <text x="60" y="182" fontSize="18" fill="currentColor" fontFamily="monospace" opacity="0.5">
+            passion: &quot;Code &amp; UI&quot;
+          </text>
+          <text x="40" y="210" fontSize="20" fill="currentColor" fontFamily="monospace" opacity="0.9">
+            {'}'}
+          </text>
+          <text x="60" y="211" fontSize="20" fill="currentColor" fontFamily="monospace" opacity="0.6">
+            █
+          </text>
+        </svg>
+      </div>
+
       <div className="absolute -z-10 top-1/4 right-0 w-64 h-64 bg-primary/5 blur-3xl rounded-full" />
       <div className="absolute -z-10 bottom-1/4 -left-10 w-80 h-80 bg-primary/10 blur-[100px] rounded-full" />
     </section>

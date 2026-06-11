@@ -1,14 +1,22 @@
 .button{
-  &--solid{
+  /* &--solid{
     @apply bg-primary text-bg-site font-bold rounded-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20;
-  }
-  &--outline{
-    @apply border-2 border-white text-white font-bold rounded-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20;
-  }
-  &--link{
+  } */
+  /* &--link{
     @apply text-primary font-bold rounded-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20;
   }
   &--icon{
     @apply text-primary font-bold rounded-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20;
-  }
+  } */
+}
+.button--outline{
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  font-weight: bold;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 1rem;
+    /* @apply border-2 border-primary text-primary font-bold rounded-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20; */
 }
