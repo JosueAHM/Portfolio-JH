@@ -7,7 +7,9 @@ Portfolio web personal desarrollado con React + Vite.
 - **Framework:** React 19
 - **Build tool:** Vite 8
 - **Language:** JavaScript (JSX)
-- **Styling:** CSS (CSS custom properties, nesting, prefers-color-scheme dark mode)
+- **Styling:** Tailwind CSS v4 (con `@theme` para tokens de diseño)
+- **Fonts:** Poppins (headings) + Source Sans 3 (body) via Google Fonts
+- **i18n:** i18next + react-i18next (español / inglés)
 - **Linting:** ESLint 10 con plugins para React Hooks y React Refresh
 
 ## Project Structure
@@ -15,22 +17,37 @@ Portfolio web personal desarrollado con React + Vite.
 portfolio-JH/
 ├── public/
 │   ├── favicon.svg
-│   └── icons.svg          # SVG sprite para iconos
+│   └── icons.svg              # SVG sprite para iconos
 ├── src/
-│   ├── assets/
-│   │   ├── hero.png
-│   │   ├── react.svg
-│   │   └── vite.svg
-│   ├── App.jsx            # Componente principal
-│   ├── App.css            # Estilos del layout y componentes
-│   ├── index.css          # Estilos globales y variables CSS
-│   └── main.jsx           # Entry point
+│   ├── assets/                # Imágenes estáticas (profile, etc.)
+│   ├── components/            # Componentes React
+│   │   └── Sidebar/
+│   │       └── Sidebar.jsx    # Sidebar fijo con avatar, nav y redes
+│   ├── locales/
+│   │   ├── es.json            # Traducciones español
+│   │   └── en.json            # Traducciones inglés
+│   ├── App.jsx                # Componente principal (layout + contenido)
+│   ├── i18n.js                # Configuración de i18next
+│   ├── index.css              # Tailwind + tokens de diseño + base
+│   └── main.jsx               # Entry point
 ├── .gitignore
 ├── eslint.config.js
 ├── index.html
 ├── package.json
-└── vite.config.js
+├── vite.config.js
+├── AGENTS.md
+└── README.md
 ```
+
+## Design Tokens (Tailwind v4 `@theme`)
+| Token | Clase Tailwind | Valor |
+|-------|----------------|-------|
+| `--color-bg-site` | `bg-bg-site` | `#262726` |
+| `--color-secondary` | `bg-secondary` / `text-secondary` | `#1E1E1E` |
+| `--color-primary` | `bg-primary` / `text-primary` | `#00BF63` |
+| `--color-text-muted` | `text-text-muted` | `#D9D9D9` |
+| `--font-heading` | `font-heading` | `'Poppins', sans-serif` |
+| `--font-sans` | `font-sans` | `'Source Sans 3', sans-serif` |
 
 ## Commands
 ```bash
@@ -42,7 +59,8 @@ npm run lint     # Ejecutar ESLint
 
 ## Conventions
 - Componentes funcionales con hooks (sin clases)
-- CSS con custom properties definidas en `:root` para theming (claro/oscuro)
-- Media queries para responsive (breakpoint: 1024px)
+- Estilos con Tailwind CSS v4, clases utilitarias sobre CSS manual
+- Tokens de diseño (colores, tipografía) definidos en `@theme` en `index.css`
 - SVG icons usados mediante `<use href="/icons.svg#icon-id">`
-- Imports de assets estáticos usando import (Vite resuelve la ruta)
+- Textos traducibles mediante `<Trans i18nKey="key" />` o `t('key')`
+- Archivos de traducción en `src/locales/{idioma}.json`

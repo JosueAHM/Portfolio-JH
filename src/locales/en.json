@@ -1,7 +1,16 @@
 {
-    "title": "This is my first web portfolio",
-    "description": "Edit <1>src/App.jsx</1> and save to test HMR",
-    "count": "Count: {{count}}",
-    "docs": "Documentation",
-    "social": "Connect with us"
+  "profile": {
+    "name": "Josué Holguín",
+    "role": "Full Stack Dev & UI Designer"
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "habilities": "Habilities",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "presentation": "Hi, I'm Josué Holguín",
+  "subtitle-presentation": "Full Stack Dev & UI Designer",
+  "presentation-description": "I am a software engineer with skills in UX / UI design and web development, handling various technologies in this field, I work in a team, with a taste for learning new things and easy adaptation to them, I am supportive and with great skills in my field, such as the design of graphic interfaces."
 }

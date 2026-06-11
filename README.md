@@ -1,16 +1,32 @@
-# React + Vite
+# Portfolio JH
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio web personal de **Josué Holguín** — Full Stack Dev & UI Designer. Construido con React + Vite + Tailwind CSS v4.
 
-Currently, two official plugins are available:
+## Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **Vite 8**
+- **Tailwind CSS v4** con tokens de diseño personalizados
+- **i18next + react-i18next** para español / inglés
+- **Google Fonts** — Poppins (headings), Source Sans 3 (body)
 
-## React Compiler
+## Comandos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm run dev      # Iniciar servidor de desarrollo
+npm run build    # Build de producción
+npm run preview  # Previsualizar build
+npm run lint     # Ejecutar ESLint
+```
 
-## Expanding the ESLint configuration
+## Estructura
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├── components/   # Componentes (Sidebar, etc.)
+├── locales/      # Traducciones (es.json, en.json)
+├── assets/       # Imágenes estáticas
+├── i18n.js       # Configuración de i18next
+├── index.css     # Tailwind + tokens de diseño
+├── App.jsx       # Layout principal
+└── main.jsx      # Entry point
+```
