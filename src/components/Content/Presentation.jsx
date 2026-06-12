@@ -4,7 +4,7 @@ const Presentation = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="home" className="relative flex flex-col md:flex-row items-center justify-center min-h-[80vh] gap-12 px-4">
+    <section id="home" className="relative flex flex-col md:flex-row items-center justify-center min-h-[80vh] gap-10 px-4">
       <div className="flex-1 max-w-2xl space-y-8">
         <div className="space-y-4">
           <h1 className="heading-1 font-bold tracking-tight text-white leading-tight">
@@ -52,22 +52,22 @@ const Presentation = () => {
           <circle cx="44" cy="44" r="6" fill="currentColor" />
           <circle cx="68" cy="44" r="6" fill="currentColor" opacity="0.5" />
           <circle cx="92" cy="44" r="6" fill="currentColor" opacity="0.3" />
-          <text x="40" y="100" fontSize="20" fill="currentColor" fontFamily="monospace" opacity="0.9">
+          <text x="40" y="80" fontSize="20" fill="currentColor" fontFamily="monospace" opacity="0.9">
             &gt; const dev = {'{'}
           </text>
-          <text x="60" y="130" fontSize="18" fill="currentColor" fontFamily="monospace" opacity="0.7">
+          <text x="60" y="100" fontSize="18" fill="currentColor" fontFamily="monospace" opacity="0.7">
             name: &quot;Josué&quot;
           </text>
-          <text x="60" y="156" fontSize="18" fill="currentColor" fontFamily="monospace" opacity="0.7">
+          <text x="60" y="126" fontSize="18" fill="currentColor" fontFamily="monospace" opacity="0.7">
             role: &quot;Full Stack&quot;
           </text>
-          <text x="60" y="182" fontSize="18" fill="currentColor" fontFamily="monospace" opacity="0.5">
+          <text x="60" y="152" fontSize="18" fill="currentColor" fontFamily="monospace" opacity="0.5">
             passion: &quot;Code &amp; UI&quot;
           </text>
-          <text x="40" y="210" fontSize="20" fill="currentColor" fontFamily="monospace" opacity="0.9">
+          <text x="40" y="180" fontSize="20" fill="currentColor" fontFamily="monospace" opacity="0.9">
             {'}'}
           </text>
-          <text x="60" y="211" fontSize="20" fill="currentColor" fontFamily="monospace" opacity="0.6">
+          <text x="60" y="181" fontSize="20" fill="currentColor" fontFamily="monospace" opacity="0.6">
             █
           </text>
         </svg>

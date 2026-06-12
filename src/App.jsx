@@ -2,6 +2,10 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Sidebar from './components/Sidebar/Sidebar'
 import Presentation from './components/Content/Presentation'
+import Jobs from './components/Content/Jobs'
+import Habilities from './components/Content/Habilities'
+import Experience from './components/Content/Experience'
+import Contact from './components/Content/Contact'
 import './App.css'
 
 function App() {
@@ -36,6 +40,10 @@ function App() {
       <main className="flex-1 lg:ml-64">
         <div className="main-container">
           <Presentation />
+          <Jobs />
+          <Habilities />
+          <Experience />
+          <Contact />
         </div>
       </main>
     </div>
