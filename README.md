@@ -22,11 +22,15 @@ npm run lint     # Ejecutar ESLint
 
 ```
 src/
-├── components/   # Componentes (Sidebar, etc.)
-├── locales/      # Traducciones (es.json, en.json)
-├── assets/       # Imágenes estáticas
-├── i18n.js       # Configuración de i18next
-├── index.css     # Tailwind + tokens de diseño
-├── App.jsx       # Layout principal
-└── main.jsx      # Entry point
+├── components/
+│   ├── Sidebar/    # Sidebar fijo con avatar, nav y redes
+│   ├── Header/     # Barra superior con contacto y selector de idioma
+│   ├── Footer/     # Pie de página
+│   └── Content/    # Secciones (Presentation, Jobs, Habilities, etc.)
+├── locales/        # Traducciones (es.json, en.json)
+├── assets/         # Imágenes estáticas
+├── i18n.js         # Configuración de i18next
+├── index.css       # Tailwind + tokens de diseño
+├── App.jsx         # Layout principal
+└── main.jsx        # Entry point
 ```

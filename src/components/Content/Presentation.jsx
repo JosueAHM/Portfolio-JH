@@ -7,7 +7,7 @@ const Presentation = () => {
     <section id="home" className="relative flex flex-col md:flex-row items-center justify-center min-h-[80vh] gap-10 px-4">
       <div className="flex-1 max-w-2xl space-y-8">
         <div className="space-y-4">
-          <h1 className="heading-1 font-bold tracking-tight text-white leading-tight">
+          <h1 className="heading-1 font-bold text-white">
             {t('presentation')}
           </h1>
           <div className="h-1.5 w-24 bg-primary rounded-full" />

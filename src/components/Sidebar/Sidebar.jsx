@@ -3,8 +3,9 @@ import { useTranslation } from 'react-i18next'
 
 const socialLinks = [
   { href: 'https://github.com/josueAHM', icon: 'github-icon', label: 'GitHub' },
-  { href: 'https://linkedin.com/in/josue', icon: 'linkedin-icon', label: 'LinkedIn' },
-  { href: 'https://instagram.com/josue', icon: 'instagram-icon', label: 'Instagram' },
+  { href: 'https://www.linkedin.com/in/josue-holguin-4b5362221', icon: 'linkedin-icon', label: 'LinkedIn' },
+  { href: 'https://www.instagram.com/josue_hm997', icon: 'instagram-icon', label: 'Instagram' },
+  { href: 'mailto:josue_holguin@outlook.com', icon: 'mail-icon', label: 'Email' },
 ]
 
 const navItems = [
@@ -12,7 +13,7 @@ const navItems = [
   { key: 'nav.projects', href: '#projects' },
   { key: 'nav.habilities', href: '#habilities' },
   { key: 'nav.experience', href: '#experience' },
-  { key: 'nav.contact', href: '#contact' },
+  { key: 'nav.contact-me', href: '#contact' },
 ]
 
 function Sidebar({ isOpen, onClose }) {
