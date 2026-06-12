@@ -26,6 +26,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     margin: 0;
     background-color: var(--color-bg-site);
@@ -35,6 +39,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
+    letter-spacing: 1px;
   }
   .heading-1{
     font-size: var(--font-size-heading-1);
@@ -80,7 +85,7 @@
 }
 
 .main-container {
-  @apply mx-5 md:mx-10 my-8;
+  @apply mx-4 md:mx-6 my-8;
 }
 
 .container {
