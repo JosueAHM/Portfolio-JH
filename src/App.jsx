@@ -44,8 +44,8 @@ function App() {
         <div className="main-container content">
           <Presentation />
           <Jobs />
-          <Habilities />
           <Experience />
+          <Habilities />
           <Contact />
         </div>
         <Footer />

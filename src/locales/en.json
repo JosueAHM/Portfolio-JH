@@ -8,6 +8,7 @@
     "projects": "My projects",
     "habilities": "Skills",
     "experience": "Experience",
+  "experience-title": "Experience",
     "contact-me": "Contact me"
   },
   "presentation": "Hi, I'm Josué Holguín",
@@ -24,5 +25,6 @@
   "footer": {
     "rights": "All rights reserved.",
     "built": "Built with React + Tailwind"
-  }
+  },
+  "experience-title": "Experience"
 }

@@ -17,12 +17,13 @@ Portfolio web personal desarrollado con React + Vite.
 portfolio-JH/
 ├── public/
 │   ├── favicon.svg
-│   └── icons.svg              # SVG sprite para iconos
+│   ├── icons.svg              # SVG sprite para iconos (incluye external-link-icon)
+│   └── *.webp                 # Imágenes de proyectos (desde public/)
 ├── src/
 │   ├── assets/                # Imágenes estáticas (profile, etc.)
 │   ├── components/            # Componentes React
 │   │   ├── Sidebar/
-│   │   │   └── Sidebar.jsx    # Sidebar fijo con avatar, nav y redes
+│   │   │   └── Sidebar.jsx    # Sidebar fijo con scroll spy activo
 │   │   ├── Header/
 │   │   │   └── Header.jsx     # Barra superior con contacto y selector de idioma
 │   │   ├── Footer/
@@ -30,10 +31,13 @@ portfolio-JH/
 │   │   └── Content/           # Secciones de contenido
 │   │       ├── Presentation.jsx
 │   │       ├── ProjectCard.jsx
-│   │       ├── Jobs.jsx       # Sección "Mis trabajos"
+│   │       ├── Jobs.jsx       # Sección "Mis trabajos" con imágenes y enlaces
 │   │       ├── Habilities.jsx
-│   │       ├── Experience.jsx
+│   │       ├── Experience.jsx # Timeline laboral con 3 experiencias
+│   │       ├── ExperienceCard.jsx  # Card de experiencia con highlights y tags
 │   │       └── Contact.jsx
+│   ├── hooks/
+│   │   └── useActiveSection.js # Scroll spy con IntersectionObserver
 │   ├── locales/
 │   │   ├── es.json            # Traducciones español
 │   │   └── en.json            # Traducciones inglés
@@ -78,3 +82,7 @@ npm run lint     # Ejecutar ESLint
 - Textos traducibles mediante `<Trans i18nKey="key" />` o `t('key')`
 - Archivos de traducción en `src/locales/{idioma}.json`
 - Layout responsive: sidebar fijo en lg+ / menú hamburguesa en móvil
+- Hook personalizado `useActiveSection` para scroll spy en navegación del sidebar
+- Proyectos con imagen (`image`) y enlace externo (`url`) opcionales como props de `ProjectCard`
+- Cards de experiencia renderizadas con `ExperienceCard`, timeline vertical en desktop
+- Imágenes de proyectos almacenadas en `public/` y referenciadas como `/nombre.webp`

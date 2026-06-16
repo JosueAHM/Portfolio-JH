@@ -8,6 +8,7 @@
     "projects": "Mis proyectos",
     "habilities": "Mis habilidades",
     "experience": "Mi experiencia",
+  "experience-title": "Experiencia",
     "contact-me": "Contáctame"
   },
   "presentation": "Hola, Soy Josué Holguín",
@@ -18,11 +19,12 @@
   "contact-me": "Contáctame",
   "projects": {
     "title": "Mis trabajos",
-    "design": "En diseño",
-    "development": "En desarrollo"
+    "design": "De diseño",
+    "development": "De desarrollo"
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
     "built": "Construido con React + Tailwind"
-  }
+  },
+  "experience-title": "Mi experiencia"
 }
