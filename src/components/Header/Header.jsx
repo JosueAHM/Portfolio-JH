@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
-import i18n from "../../i18n";
 
 function Header({ sidebarOpen, onToggle, isDark, onToggleTheme }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const toggleLanguage = () => {
     const next = i18n.language === "es" ? "en" : "es";
