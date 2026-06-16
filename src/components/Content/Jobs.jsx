@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import ProjectCard from "./ProjectCard";
-import useInView from "../../hooks/useInView";
+import useInView from "@/hooks/useInView";
 
 const projectsData = {
   design: [

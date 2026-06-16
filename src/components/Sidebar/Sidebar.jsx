@@ -1,6 +1,6 @@
-import profileImg from '../../assets/profile-img.jpg'
+import profileImg from '@/assets/profile-img.jpg'
 import { useTranslation } from 'react-i18next'
-import useActiveSection from '../../hooks/useActiveSection'
+import useActiveSection from '@/hooks/useActiveSection'
 
 const socialLinks = [
   { href: 'https://github.com/josueAHM', icon: 'github-icon', label: 'GitHub' },
