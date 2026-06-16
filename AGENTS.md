@@ -25,19 +25,20 @@ portfolio-JH/
 │   │   ├── Sidebar/
 │   │   │   └── Sidebar.jsx    # Sidebar fijo con scroll spy activo
 │   │   ├── Header/
-│   │   │   └── Header.jsx     # Barra superior con contacto y selector de idioma
+│   │   │   └── Header.jsx     # Barra superior con menú hamburguesa, contacto y selector de idioma
 │   │   ├── Footer/
 │   │   │   └── Footer.jsx     # Pie de página
 │   │   └── Content/           # Secciones de contenido
 │   │       ├── Presentation.jsx
 │   │       ├── ProjectCard.jsx
 │   │       ├── Jobs.jsx       # Sección "Mis trabajos" con imágenes y enlaces
-│   │       ├── Habilities.jsx
+│   │       ├── SkillsSection.jsx # 6 categorías de habilidades con pills
 │   │       ├── Experience.jsx # Timeline laboral con 3 experiencias
 │   │       ├── ExperienceCard.jsx  # Card de experiencia con highlights y tags
 │   │       └── Contact.jsx
 │   ├── hooks/
-│   │   └── useActiveSection.js # Scroll spy con IntersectionObserver
+│   │   ├── useActiveSection.js # Scroll spy con single observer + rootMargin
+│   │   └── useInView.js         # Animaciones one-time al hacer scroll
 │   ├── locales/
 │   │   ├── es.json            # Traducciones español
 │   │   └── en.json            # Traducciones inglés
@@ -81,8 +82,10 @@ npm run lint     # Ejecutar ESLint
 - SVG icons usados mediante `<use href="/icons.svg#icon-id">` con `fill="currentColor"` para heredar color
 - Textos traducibles mediante `<Trans i18nKey="key" />` o `t('key')`
 - Archivos de traducción en `src/locales/{idioma}.json`
-- Layout responsive: sidebar fijo en lg+ / menú hamburguesa en móvil
-- Hook personalizado `useActiveSection` para scroll spy en navegación del sidebar
+- Layout responsive: sidebar fijo en lg+ / menú hamburguesa integrado en el Header
+- Hook `useActiveSection` scroll spy con single observer + `rootMargin: '-80px 0px -60% 0px'`
+- Hook `useInView` para animaciones one-time de aparición al hacer scroll
 - Proyectos con imagen (`image`) y enlace externo (`url`) opcionales como props de `ProjectCard`
-- Cards de experiencia renderizadas con `ExperienceCard`, timeline vertical en desktop
+- Cards de experiencia con `companyUrl` opcional para enlazar al sitio web de la empresa
+- Skills y Experience externalizados a i18n (claves `skills.*`, `exp.*`)
 - Imágenes de proyectos almacenadas en `public/` y referenciadas como `/nombre.webp`
