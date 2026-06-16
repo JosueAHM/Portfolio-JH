@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import useInView from "../../hooks/useInView";
+import useInView from "@/hooks/useInView";
 
 const mailSubject = encodeURIComponent("Contacto desde portfolio");
 const mailBody = encodeURIComponent(`Hola Josué,

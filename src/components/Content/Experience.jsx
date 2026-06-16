@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import ExperienceCard from "./ExperienceCard";
-import useInView from "../../hooks/useInView";
+import useInView from "@/hooks/useInView";
 
 const experiencesMeta = [
   {

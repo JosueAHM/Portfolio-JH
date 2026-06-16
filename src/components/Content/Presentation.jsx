@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import useInView from "../../hooks/useInView";
+import useInView from "@/hooks/useInView";
 
 const Presentation = () => {
   const { t } = useTranslation();
