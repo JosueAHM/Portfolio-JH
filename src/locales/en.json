@@ -8,7 +8,6 @@
     "projects": "My projects",
     "habilities": "Skills",
     "experience": "Experience",
-  "experience-title": "Experience",
     "contact-me": "Contact me"
   },
   "presentation": "Hi, I'm Josué Holguín",
@@ -26,5 +25,72 @@
     "rights": "All rights reserved.",
     "built": "Built with React + Tailwind"
   },
-  "experience-title": "Experience"
+  "exp": {
+    "title": "Experience",
+    "funiber": {
+      "role": "Web Developer / UX Designer",
+      "highlights": [
+        "Developed web applications with React, Vue.js, and TypeScript focused on user experience",
+        "Implemented backend solutions in PHP for scalable systems",
+        "Designed user-centered interfaces for internal systems",
+        "Created wireframes and interactive prototypes",
+        "Validated functional flows with proof-of-concept testing",
+        "Managed environments with Docker and Linux",
+        "Version control with Git",
+        "Implemented CMS platforms (Drupal, WordPress, Strapi, Squidex)"
+      ]
+    },
+    "global-hitss": {
+      "role": "Web Developer / UX Designer",
+      "highlights": [
+        "Designed mockups and prototypes with Figma and Adobe XD",
+        "Developed RPA bots with Automation Anywhere",
+        "Automated business processes",
+        "Optimized internal workflows",
+        "Used Docker for solution deployment"
+      ]
+    },
+    "santa-priscila": {
+      "role": "Web Developer",
+      "highlights": [
+        "Developed ERP modules with Vue.js and Laravel",
+        "Integrated frontend-backend via APIs",
+        "Used Git for version control"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Have a project in mind or looking to hire?",
+    "description": "I'm open to collaborating on web technology projects, solving technical challenges, or joining your development team. Let's talk!",
+    "button": "Drop me an email"
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "categories": {
+      "frontend": {
+        "title": "Frontend Development",
+        "desc": "Building modern and scalable user interfaces"
+      },
+      "backend": {
+        "title": "Backend & Architecture",
+        "desc": "Developing robust and scalable systems"
+      },
+      "design": {
+        "title": "UX / UI Design",
+        "desc": "Designing user-centered digital experiences"
+      },
+      "devops": {
+        "title": "DevOps & Tools",
+        "desc": "Managing environments and development workflows"
+      },
+      "cms": {
+        "title": "CMS & Platforms",
+        "desc": "Content management and headless architectures"
+      },
+      "automation": {
+        "title": "Automation",
+        "desc": "Process optimization and automation"
+      }
+    }
+  }
 }

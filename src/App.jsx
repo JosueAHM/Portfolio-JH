@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import Sidebar from './components/Sidebar/Sidebar'
 import Presentation from './components/Content/Presentation'
 import Jobs from './components/Content/Jobs'
-import Habilities from './components/Content/Habilities'
+import SkillsSection from './components/Content/SkillsSection'
 import Experience from './components/Content/Experience'
 import Contact from './components/Content/Contact'
 import Header from './components/Header/Header'
@@ -45,7 +45,7 @@ function App() {
           <Presentation />
           <Jobs />
           <Experience />
-          <Habilities />
+          <SkillsSection />
           <Contact />
         </div>
         <Footer />
