@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import useInView from "../../hooks/useInView";
 
 const categoryKeys = [
   "frontend",
@@ -37,30 +37,6 @@ const categorySkills = {
   ],
 };
 
-function useInView(threshold = 0.1) {
-  const ref = useRef(null);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.disconnect();
-        }
-      },
-      { threshold },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [threshold]);
-
-  return [ref, inView];
-}
-
 function SkillCard({ category, index, inView }) {
   return (
     <div
@@ -96,7 +72,11 @@ function SkillsSection() {
   }));
 
   return (
-    <section id="habilities" className="py-16 scroll-mt-20" ref={sectionRef}>
+    <section
+      id="habilities"
+      className="py-10 md:py-16 scroll-mt-20"
+      ref={sectionRef}
+    >
       <div className="max-w-6xl mx-auto">
         <div
           className={`space-y-4 transition-all duration-700 ease-out ${
