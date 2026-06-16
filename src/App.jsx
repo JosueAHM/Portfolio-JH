@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useState, useEffect } from 'react'
 import Sidebar from './components/Sidebar/Sidebar'
 import Presentation from './components/Content/Presentation'
 import Jobs from './components/Content/Jobs'
@@ -12,7 +11,15 @@ import './App.css'
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const { t } = useTranslation()
+  const [isDark, setIsDark] = useState(() => {
+    const saved = localStorage.getItem('theme')
+    return saved ? saved === 'dark' : true
+  })
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light')
+    localStorage.setItem('theme', isDark ? 'dark' : 'light')
+  }, [isDark])
 
   return (
     <div className="flex w-full min-h-screen bg-bg-site">
@@ -26,7 +33,7 @@ function App() {
       )}
 
       <main className="flex-1 lg:ml-64">
-          <Header sidebarOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
+          <Header sidebarOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} isDark={isDark} onToggleTheme={() => setIsDark(!isDark)} />
         <div className="main-container content">
           <Presentation />
           <Jobs />
