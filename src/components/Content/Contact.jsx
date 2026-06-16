@@ -43,7 +43,7 @@ function Contact() {
 
         <a
           href={mailHref}
-          className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-3 rounded-full mx-auto hover:opacity-90 transition"
+          className="inline-flex items-center justify-center gap-2 bg-header-bg border-2 border-primary text-text-dark px-7 py-2.5 rounded-full mx-auto hover:opacity-90 transition"
           aria-label={t("contact.button")}
         >
           <svg className="w-5 h-5" role="presentation" aria-hidden="true">
