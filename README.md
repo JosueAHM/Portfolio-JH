@@ -8,7 +8,7 @@ Portfolio web personal de **Josué Holguín** — Full Stack Dev & UI Designer. 
 - **Tailwind CSS v4** con tokens de diseño personalizados (`@theme`)
 - **i18next + react-i18next** para español / inglés
 - **Google Fonts** — Poppins (headings), Source Sans 3 (body)
-- **IntersectionObserver** para scroll spy en navegación
+- **IntersectionObserver** para scroll spy y animaciones de entrada
 
 ## Comandos
 
@@ -25,18 +25,19 @@ npm run lint     # Ejecutar ESLint
 src/
 ├── components/
 │   ├── Sidebar/          # Sidebar fijo con avatar, nav y redes
-│   ├── Header/           # Barra superior con contacto y selector de idioma
+│   ├── Header/           # Barra superior con menú hamburguesa, contacto y selector de idioma
 │   ├── Footer/           # Pie de página
 │   └── Content/          # Secciones (Presentation, Jobs, Experience, etc.)
 │       ├── Presentation.jsx
 │       ├── Jobs.jsx       # Proyectos con ProjectCard
 │       ├── ProjectCard.jsx
-│       ├── Experience.jsx # Timeline laboral con ExperienceCard
+│       ├── Experience.jsx # Timeline laboral con ExperienceCard (enlaces a empresas)
 │       ├── ExperienceCard.jsx
-│       ├── Habilities.jsx
+│       ├── SkillsSection.jsx
 │       └── Contact.jsx
 ├── hooks/                # Custom hooks
-│   └── useActiveSection.js  # Scroll spy con IntersectionObserver
+│   ├── useActiveSection.js  # Scroll spy con IntersectionObserver (single observer + rootMargin)
+│   └── useInView.js         # Animaciones de entrada al hacer scroll
 ├── locales/              # Traducciones (es.json, en.json)
 ├── assets/               # Imágenes estáticas
 ├── i18n.js               # Configuración de i18next

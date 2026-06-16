@@ -77,7 +77,7 @@ function SkillsSection() {
       className="py-10 md:py-16 scroll-mt-20"
       ref={sectionRef}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="w-full">
         <div
           className={`space-y-4 transition-all duration-700 ease-out ${
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
