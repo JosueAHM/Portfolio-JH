@@ -10,7 +10,7 @@ function Header({ sidebarOpen, onToggle, isDark, onToggleTheme }) {
   };
 
   return (
-    <div className="sticky top-0 z-20 flex items-center bg-primary px-6 py-3 mb-8">
+    <div className="sticky top-0 z-20 flex items-center bg-header-bg px-6 py-3 mb-8 shadow-sm">
       <button
         className="lg:hidden text-text-dark p-1 mr-2 hover:opacity-80 transition-opacity cursor-pointer"
         onClick={onToggle}

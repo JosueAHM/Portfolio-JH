@@ -6,6 +6,7 @@ Portfolio web personal de **Josué Holguín** — Full Stack Dev & UI Designer. 
 
 - **React 19** + **Vite 8**
 - **Tailwind CSS v4** con tokens de diseño personalizados (`@theme`)
+- **Modo claro/oscuro** con `[data-theme="light"]` y persistencia en `localStorage`
 - **i18next + react-i18next** para español / inglés
 - **Google Fonts** — Poppins (headings), Source Sans 3 (body)
 - **IntersectionObserver** para scroll spy y animaciones de entrada

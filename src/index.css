@@ -9,6 +9,7 @@
   --color-bg-site: #262726;
   --color-secondary: #1e1e1e;
   --color-primary: #00bf63;
+  --color-header-bg: #00bf63;
   --color-text-muted: #d9d9d9;
   --color-white: #ffffff;
   --color-text-dark: #333333;
@@ -37,6 +38,7 @@
     --color-text-muted: #4a4a4a;
     --color-text-dark: #1a1a1a;
     --color-white: #1a1a1a;
+    --color-header-bg: #e6f7ee;
   }
 
   body {
