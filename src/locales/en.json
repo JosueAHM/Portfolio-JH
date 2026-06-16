@@ -5,12 +5,26 @@
   },
   "nav": {
     "home": "Home",
-    "projects": "Projects",
-    "habilities": "Habilities",
+    "projects": "My projects",
+    "habilities": "Skills",
     "experience": "Experience",
-    "contact": "Contact"
+  "experience-title": "Experience",
+    "contact-me": "Contact me"
   },
   "presentation": "Hi, I'm Josué Holguín",
   "subtitle-presentation": "Full Stack Dev & UI Designer",
-  "presentation-description": "I am a software engineer with skills in UX / UI design and web development, handling various technologies in this field, I work in a team, with a taste for learning new things and easy adaptation to them, I am supportive and with great skills in my field, such as the design of graphic interfaces."
+  "presentation-description": "I am a software engineer with skills in UX / UI design and web development, handling various technologies in this field. I work in a team, with a taste for learning new things and easy adaptation to them. I am supportive and with great skills in my field, such as the design of graphic interfaces.",
+  "see-resume": "See Resume",
+  "see-linkedin": "See Linkedin",
+  "contact-me": "Contact me",
+  "projects": {
+    "title": "My projects",
+    "design": "Design",
+    "development": "Development"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "built": "Built with React + Tailwind"
+  },
+  "experience-title": "Experience"
 }

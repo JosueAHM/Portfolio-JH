@@ -1,22 +1,27 @@
 import profileImg from '../../assets/profile-img.jpg'
 import { useTranslation } from 'react-i18next'
+import useActiveSection from '../../hooks/useActiveSection'
 
 const socialLinks = [
   { href: 'https://github.com/josueAHM', icon: 'github-icon', label: 'GitHub' },
-  { href: 'https://linkedin.com/in/josue', icon: 'linkedin-icon', label: 'LinkedIn' },
-  { href: 'https://instagram.com/josue', icon: 'instagram-icon', label: 'Instagram' },
+  { href: 'https://www.linkedin.com/in/josue-holguin-4b5362221', icon: 'linkedin-icon', label: 'LinkedIn' },
+  { href: 'https://www.instagram.com/josue_hm997', icon: 'instagram-icon', label: 'Instagram' },
+  { href: 'mailto:josue_holguin@outlook.com', icon: 'mail-icon', label: 'Email' },
 ]
 
 const navItems = [
   { key: 'nav.home', href: '#home' },
   { key: 'nav.projects', href: '#projects' },
-  { key: 'nav.habilities', href: '#habilities' },
   { key: 'nav.experience', href: '#experience' },
-  { key: 'nav.contact', href: '#contact' },
+  { key: 'nav.habilities', href: '#habilities' },
+  { key: 'nav.contact-me', href: '#contact' },
 ]
+
+const sectionIds = navItems.map((item) => item.href.replace('#', ''))
 
 function Sidebar({ isOpen, onClose }) {
   const { t } = useTranslation()
+  const activeId = useActiveSection(sectionIds)
 
   return (
     <aside
@@ -55,7 +60,11 @@ function Sidebar({ isOpen, onClose }) {
               <a
                 href={item.href}
                 onClick={onClose}
-                className="block w-full text-text-muted hover:text-primary transition-colors duration-200 text-start px-4 py-2 rounded-md hover:bg-white/5"
+                className={`block w-full transition-colors duration-200 text-start px-4 py-2 rounded-md ${
+                  activeId === item.href.replace('#', '')
+                    ? 'text-primary font-semibold'
+                    : 'text-text-muted hover:text-primary hover:bg-white/5'
+                }`}
               >
                 {t(item.key)}
               </a>
