@@ -5,13 +5,92 @@
   },
   "nav": {
     "home": "Inicio",
-    "projects": "Proyectos",
-    "habilities": "Habilidades",
-    "experience": "Experiencia",
-    "contact": "Contacto"
+    "projects": "Mis proyectos",
+    "habilities": "Mis habilidades",
+    "experience": "Mi experiencia",
+    "contact-me": "Contáctame"
   },
   "presentation": "Hola, Soy Josué Holguín",
   "subtitle-presentation": "Full Stack Dev & UI Designer",
   "presentation-description": "Soy un ingeniero en software con habilidades en diseño UX / UI y desarrollo web, manejando diversas tecnologías de este ámbito, trabajo en equipo, con gusto por aprender temas nuevos y fácil adaptación a estos, solidario y con grandes capacidades en mi campo, como el diseño de interfaces gráficas.",
-  "see-resume": "Ver Curriculum"
+  "see-resume": "Ver Curriculum",
+  "see-linkedin": "Ver Linkedin",
+  "contact-me": "Contáctame",
+  "projects": {
+    "title": "Mis trabajos",
+    "design": "De diseño",
+    "development": "De desarrollo"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "built": "Construido con React + Tailwind"
+  },
+  "exp": {
+    "title": "Mi experiencia",
+    "funiber": {
+      "role": "Desarrollador Web / Diseñador UX",
+      "highlights": [
+        "Desarrollo de aplicaciones web con React, Vue.js y TypeScript enfocadas en experiencia de usuario",
+        "Implementación de soluciones backend en PHP para sistemas escalables",
+        "Diseño de interfaces centradas en el usuario para sistemas internos",
+        "Creación de wireframes y prototipos interactivos",
+        "Validación de flujos funcionales con pruebas de concepto",
+        "Gestión de entornos con Docker y Linux",
+        "Control de versiones con Git",
+        "Implementación de CMS (Drupal, WordPress, Strapi, Squidex)"
+      ]
+    },
+    "global-hitss": {
+      "role": "Desarrollador Web / Diseñador UX",
+      "highlights": [
+        "Diseño de mockups y prototipos con Figma y Adobe XD",
+        "Desarrollo de bots RPA con Automation Anywhere",
+        "Automatización de procesos empresariales",
+        "Optimización de flujos internos",
+        "Uso de Docker para despliegue de soluciones"
+      ]
+    },
+    "santa-priscila": {
+      "role": "Desarrollador Web",
+      "highlights": [
+        "Desarrollo de módulos ERP con Vue.js y Laravel",
+        "Integración frontend-backend mediante APIs",
+        "Uso de Git para control de versiones"
+      ]
+    }
+  },
+  "contact": {
+    "title": "¿Tienes un proyecto en mente o buscas sumar talento?",
+    "description": "Estoy disponible para colaborar en proyectos de tecnología web, resolver desafíos técnicos o unirme a tu equipo de desarrollo. ¡Hablemos!",
+    "button": "Escríbeme por correo"
+  },
+  "skills": {
+    "title": "Mis habilidades y tecnologías",
+    "categories": {
+      "frontend": {
+        "title": "Frontend Development",
+        "desc": "Interfaces modernas y escalables"
+      },
+      "backend": {
+        "title": "Backend & Arquitectura",
+        "desc": "Sistemas robustos y escalables"
+      },
+      "design": {
+        "title": "UX / UI Design",
+        "desc": "Experiencias digitales centradas en el usuario"
+      },
+      "devops": {
+        "title": "DevOps & Herramientas",
+        "desc": "Gestión de entornos y flujos de desarrollo"
+      },
+      "cms": {
+        "title": "CMS & Plataformas",
+        "desc": "Gestión de contenido y arquitecturas headless"
+      },
+      "automation": {
+        "title": "Automatización",
+        "desc": "Optimización y automatización de procesos"
+      }
+    }
+  }
 }
