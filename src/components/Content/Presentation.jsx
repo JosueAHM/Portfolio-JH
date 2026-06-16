@@ -1,18 +1,30 @@
 import { useTranslation } from "react-i18next";
+import useInView from "../../hooks/useInView";
 
 const Presentation = () => {
   const { t } = useTranslation();
+  const [sectionRef, inView] = useInView(0.1);
 
   return (
     <section
       id="home"
-      className="relative min-h-[80vh] items-center justify-center mt-10 scroll-mt-20 py-16"
+      ref={sectionRef}
+      className="relative min-h-[80vh] items-center justify-center mt-10 scroll-mt-20 py-10 md:py-16"
     >
-      <div className="space-y-4">
+      <div
+        className={`space-y-4 transition-all duration-700 ease-out ${
+          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        }`}
+      >
         <h1 className="heading-1 font-bold text-white">{t("presentation")}</h1>
         <div className="h-1.5 w-24 bg-primary rounded-full" />
       </div>
-      <div className="flex flex-col md:flex-row gap-10 py-10">
+      <div
+        className={`flex flex-col md:flex-row gap-10 py-10 transition-all duration-700 ease-out ${
+          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+        style={{ transitionDelay: "100ms" }}
+      >
         <div className="flex-1 max-w-2xl space-y-8">
           <h2 className="heading-3 text-text-muted font-medium italic">
             {t("subtitle-presentation")}

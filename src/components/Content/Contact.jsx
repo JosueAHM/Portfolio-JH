@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import useInView from "../../hooks/useInView";
 
 const mailSubject = encodeURIComponent("Contacto desde portfolio");
 const mailBody = encodeURIComponent(`Hola Josué,
@@ -10,14 +11,28 @@ const mailHref = `mailto:josue_holguin@outlook.com?subject=${mailSubject}&body=$
 
 function Contact() {
   const { t } = useTranslation();
+  const [sectionRef, inView] = useInView(0.1);
 
   return (
-    <section id="contact" className="py-16 scroll-mt-20">
-      <div className="space-y-4">
+    <section
+      id="contact"
+      ref={sectionRef}
+      className="py-10 md:py-16 scroll-mt-20"
+    >
+      <div
+        className={`space-y-4 transition-all duration-700 ease-out ${
+          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        }`}
+      >
         <h2 className="heading-2 font-bold text-white">{t("contact-me")}</h2>
         <div className="h-1.5 w-24 bg-primary rounded-full" />
       </div>
-      <div className="max-w-4xl mx-auto px-6 mt-12 text-center">
+      <div
+        className={`max-w-4xl mx-auto px-6 mt-12 text-center transition-all duration-700 ease-out ${
+          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+        style={{ transitionDelay: "100ms" }}
+      >
         <h2 className="text-3xl md:text-4xl font-heading text-white leading-tight max-w-2xl mx-auto">
           {t("contact.title")}
         </h2>

@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import ProjectCard from "./ProjectCard";
+import useInView from "../../hooks/useInView";
 
 const projectsData = {
   design: [
@@ -40,10 +41,19 @@ const projectsData = {
 
 function Jobs() {
   const { t } = useTranslation();
+  const [sectionRef, inView] = useInView(0.1);
 
   return (
-    <section id="projects" className="py-16 scroll-mt-20">
-      <div className="space-y-4">
+    <section
+      id="projects"
+      ref={sectionRef}
+      className="py-10 md:py-16 scroll-mt-20"
+    >
+      <div
+        className={`space-y-4 transition-all duration-700 ease-out ${
+          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        }`}
+      >
         <h2 className="heading-2 font-bold text-white">
           {t("projects.title")}
         </h2>
@@ -51,7 +61,12 @@ function Jobs() {
       </div>
 
       <div className="space-y-16 mt-6">
-        <div>
+        <div
+          className={`transition-all duration-700 ease-out ${
+            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+          style={{ transitionDelay: "100ms" }}
+        >
           <h3 className="heading-4 font-heading text-white mb-6">
             {t("projects.design")}
           </h3>
@@ -62,7 +77,12 @@ function Jobs() {
           </div>
         </div>
 
-        <div>
+        <div
+          className={`transition-all duration-700 ease-out ${
+            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+          style={{ transitionDelay: "200ms" }}
+        >
           <h3 className="heading-4 font-heading text-white mb-6">
             {t("projects.development")}
           </h3>
