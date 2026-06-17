@@ -36,7 +36,7 @@ const Presentation = () => {
 
           <div className="flex flex-wrap items-center gap-6 pt-8">
             <a
-              href="https://drive.google.com/file/d/1TWbb4S6JvNmWMAisk3_u4VTb26WVlBGH/view?usp=sharing"
+              href="https://drive.google.com/file/d/1QMqezCrc1ljZIsTQujZywYQuvq_YdtvA/view?usp=sharing"
               className="button button--outline"
               target="_blank"
               rel="noopener noreferrer"
