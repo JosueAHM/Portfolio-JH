@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { Analytics } from "@vercel/analytics/react";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import Presentation from "@/components/Content/Presentation";
 import Jobs from "@/components/Content/Jobs";
@@ -49,6 +50,7 @@ function App() {
 
   return (
     <>
+      <Analytics />
       <Helmet>
         <html lang={i18n.language} />
         <title>{title}</title>
@@ -58,9 +60,9 @@ function App() {
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteUrl} />
-        <meta property="og:image" content={`${siteUrl}/favicon.svg`} />
+        <meta property="og:image" content={`${siteUrl}/presentacion-jh.webp`} />
 
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
 
