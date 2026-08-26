@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "Josué Holguín",
-    "role": "Full Stack Dev & UI Designer"
+    "role": "Full Stack Dev &  Designer"
   },
   "nav": {
     "home": "Home",
@@ -11,8 +11,8 @@
     "contact-me": "Contact me"
   },
   "presentation": "Hi, I'm Josué Holguín",
-  "subtitle-presentation": "Full Stack Dev & UI Designer",
-  "presentation-description": "I am a software engineer with skills in UX / UI design and web development, handling various technologies in this field. I work in a team, with a taste for learning new things and easy adaptation to them. I am supportive and with great skills in my field, such as the design of graphic interfaces.",
+  "subtitle-presentation": "Full Stack Dev &  Designer",
+  "presentation-description": "I am a software engineer with skills in UX /  design and web development, handling various technologies in this field. I work in a team, with a taste for learning new things and easy adaptation to them. I am supportive and with great skills in my field, such as the design of graphic interfaces.",
   "see-resume": "See Resume",
   "see-linkedin": "See Linkedin",
   "contact-me": "Contact me",
@@ -76,7 +76,7 @@
         "desc": "Developing robust and scalable systems"
       },
       "design": {
-        "title": "UX / UI Design",
+        "title": "UX Design",
         "desc": "Designing user-centered digital experiences"
       },
       "devops": {

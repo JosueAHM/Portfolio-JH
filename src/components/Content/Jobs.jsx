@@ -6,8 +6,13 @@ const projectsData = {
   design: [
     {
       title: "Corporación Quirola",
-      image: "/corporación-Quirola-cap.webp",
-      url: "https://corporacionquirola.com/",
+      image: "/corporacion-Quirola-cap.webp",
+      url: "https://www.figma.com/proto/AvPnyiLu8PLxryE44vXMIK/Corporaci%C3%B3n-Quirola?node-id=207-17&starting-point-node-id=207%3A17&t=5WpU9kU3RVqRG2YF-1",
+    },
+    {
+      title: "Concepto Migo",
+      image: "/concepto-migo-cap.webp",
+      url: "https://www.figma.com/proto/fRgY6OhE62HwRH00aUeeA6/Prueba-Devsu---Concepto-Haru%5C?node-id=4-337&starting-point-node-id=14%3A1830&t=Sl37Q9aU3cmcKLLS-1",
     },
     {
       title: "Concepto Medianet",
@@ -23,8 +28,8 @@ const projectsData = {
   development: [
     {
       title: "Corporación Quirola",
-      image: "/corporación-Quirola-cap.webp",
-      url: "https://corporacionquirola.com/",
+      image: "/corporacion-Quirola-cap.webp",
+      url: "https://www.figma.com/proto/AvPnyiLu8PLxryE44vXMIK/Corporaci%C3%B3n-Quirola?node-id=207-17&starting-point-node-id=207%3A17&t=5WpU9kU3RVqRG2YF-1",
     },
     {
       title: "Deporvito",
@@ -35,6 +40,11 @@ const projectsData = {
       title: "Photofuniber",
       image: "/photofuniber-cap.webp",
       url: "https://votes.photofuniber.com/",
+    },
+    {
+      title: "Uneatlantico",
+      image: "/uneatlantico-cap.webp",
+      url: "https://www.uneatlantico.es/",
     },
   ],
 };

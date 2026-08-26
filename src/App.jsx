@@ -17,7 +17,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Josué Holguín",
-  jobTitle: "Full Stack Developer & UX/UI Designer",
+  jobTitle: "Full Stack Developer & UX Designer",
   url: siteUrl,
   sameAs: [
     "https://github.com/josueAHM",
