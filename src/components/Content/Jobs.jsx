@@ -1,6 +1,9 @@
+import { useState, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import ProjectCard from "./ProjectCard";
 import useInView from "@/hooks/useInView";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 const projectsData = {
   design: [
@@ -49,6 +52,71 @@ const projectsData = {
   ],
 };
 
+function ProjectCarousel({ projects }) {
+  // Duplicamos el array si son pocos elementos para asegurar que Embla tenga suficientes slides para el bucle infinito
+  const displayProjects = projects.length <= 4 ? [...projects, ...projects] : projects;
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, align: "start" },
+    [Autoplay({ delay: 3500, stopOnInteraction: false })]
+  );
+  
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const onDotButtonClick = useCallback(
+    (index) => {
+      if (!emblaApi) return;
+      emblaApi.scrollTo(index);
+    },
+    [emblaApi]
+  );
+
+  const onSelect = useCallback((emblaApi) => {
+    // Usamos módulo para saber qué punto real corresponde al slide clonado
+    setSelectedIndex(emblaApi.selectedScrollSnap() % projects.length);
+  }, [projects.length]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    onSelect(emblaApi);
+    emblaApi.on("reInit", onSelect);
+    emblaApi.on("select", onSelect);
+  }, [emblaApi, onSelect]);
+
+  return (
+    <div className="relative max-w-full">
+      <div className="overflow-hidden pb-6 pt-4 -mt-4" ref={emblaRef}>
+        <div className="flex -ml-6">
+          {displayProjects.map((project, idx) => (
+            <div
+              key={idx}
+              className="flex-none min-w-0 pl-6 w-full md:w-1/2 lg:w-1/3"
+            >
+              <ProjectCard {...project} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {projects.length > 1 && (
+        <div className="flex justify-center gap-2 mt-2">
+          {projects.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => onDotButtonClick(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === selectedIndex ? "bg-primary" : "bg-text-muted/30"
+              }`}
+              aria-label={`Ir al proyecto ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function Jobs() {
   const { t } = useTranslation();
   const [sectionRef, inView] = useInView(0.1);
@@ -80,7 +148,10 @@ function Jobs() {
           <h3 className="heading-4 font-heading text-white mb-6">
             {t("projects.design")}
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="hidden lg:block">
+            <ProjectCarousel projects={projectsData.design} />
+          </div>
+          <div className="grid lg:hidden grid-cols-1 md:grid-cols-2 gap-6">
             {projectsData.design.map((project) => (
               <ProjectCard key={project.title} {...project} />
             ))}
@@ -96,7 +167,10 @@ function Jobs() {
           <h3 className="heading-4 font-heading text-white mb-6">
             {t("projects.development")}
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="hidden lg:block">
+            <ProjectCarousel projects={projectsData.development} />
+          </div>
+          <div className="grid lg:hidden grid-cols-1 md:grid-cols-2 gap-6">
             {projectsData.development.map((project) => (
               <ProjectCard key={project.title} {...project} />
             ))}

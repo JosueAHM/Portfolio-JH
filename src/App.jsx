@@ -77,7 +77,7 @@ function App() {
           />
         )}
 
-        <main className="flex-1 lg:ml-64">
+        <main className="flex-1 lg:ml-64 min-w-0">
           <Header
             sidebarOpen={sidebarOpen}
             onToggle={() => setSidebarOpen(!sidebarOpen)}

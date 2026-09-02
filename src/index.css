@@ -46,6 +46,8 @@
     background-color: var(--color-bg-site);
     color: var(--color-text-muted);
     font-family: var(--font-sans);
+    overflow-x: hidden;
+    width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -92,6 +94,7 @@
     min-height: 100svh;
     display: flex;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
 }
 

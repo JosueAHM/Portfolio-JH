@@ -9,7 +9,7 @@ const Presentation = () => {
     <section
       id="home"
       ref={sectionRef}
-      className="relative min-h-[80vh] items-center justify-center mt-10 scroll-mt-20 py-10 md:py-16"
+      className="relative md:min-h-[80vh] items-center justify-center mt-10 scroll-mt-20 py-10 md:py-16"
     >
       <div
         className={`space-y-4 transition-all duration-700 ease-out ${
