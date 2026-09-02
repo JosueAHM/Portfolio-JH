@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "Josué Holguín",
-    "role": "Full Stack Dev & UI Designer"
+    "role": "Full Stack Dev & UX Designer"
   },
   "nav": {
     "home": "Inicio",
@@ -11,8 +11,8 @@
     "contact-me": "Contáctame"
   },
   "presentation": "Hola, Soy Josué Holguín",
-  "subtitle-presentation": "Full Stack Dev & UI Designer",
-  "presentation-description": "Soy un ingeniero en software con habilidades en diseño UX / UI y desarrollo web, manejando diversas tecnologías de este ámbito, trabajo en equipo, con gusto por aprender temas nuevos y fácil adaptación a estos, solidario y con grandes capacidades en mi campo, como el diseño de interfaces gráficas.",
+  "subtitle-presentation": "Full Stack Dev & UX Designer",
+  "presentation-description": "Soy un ingeniero en software con habilidades en diseño UX y desarrollo web, manejando diversas tecnologías de este ámbito, trabajo en equipo, con gusto por aprender temas nuevos y fácil adaptación a estos, solidario y con grandes capacidades en mi campo, como el diseño de interfaces gráficas.",
   "see-resume": "Ver Curriculum",
   "see-linkedin": "Ver Linkedin",
   "contact-me": "Contáctame",
@@ -76,7 +76,7 @@
         "desc": "Sistemas robustos y escalables"
       },
       "design": {
-        "title": "UX / UI Design",
+        "title": "UX Design",
         "desc": "Experiencias digitales centradas en el usuario"
       },
       "devops": {

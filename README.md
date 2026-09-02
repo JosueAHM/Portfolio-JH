@@ -1,6 +1,6 @@
 # Portfolio JH
 
-Portfolio web personal de **Josué Holguín** — Full Stack Dev & UI Designer. Construido con React + Vite + Tailwind CSS v4.
+Portfolio web personal de **Josué Holguín** — Full Stack Dev & UX Designer. Construido con React + Vite + Tailwind CSS v4.
 
 ## Tecnologías
 
